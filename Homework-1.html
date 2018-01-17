@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">  
+      <script type="text/javascript" src="d3.v4.min.js"></script>
+
+  </head>
+  <body>
+              <table width="100%" border="0">
+
+                  <tr valign="top">
+                      <td bgcolor="#8c526b" width="40%">
+                          <b>Homework-1</b><br />
+                          <ul>
+                              <ul><h3>Styling SVG Elements Based on Data</h3></ul>
+                              <ul>
+                                  <li><a href="http://www.cs.odu.edu/~psiriger/cs725/CS725-HW1/Styling SVG elements Based on Data1 increasing order.png">Screenshot</a></li>
+                                  <li><button onclick="Styling()">D3/SVG code</button></li>
+                              </ul>
+                              <ul><h3>Using the SVG Coordinate Space</h3></ul>
+                              <ul>
+                                  <li><a href="http://www.cs.odu.edu/~psiriger/cs725/CS725-HW1/Using coordinate space.png">Screenshot</a></li>
+                                  <li><button onclick="Coordinate_space()">D3/SVG code</button></li>
+                              </ul>
+                              <h3>Description and Learning experience</h3>
+                              <li><b>Styling SVG Elements Based on Data</b></li>
+                              <p>In the first example,I learnt about how to add SVG elements to webpage based on data.</p>
+                              <li><p>How it works?</p></li>
+                              <p>SVG circle element can be created by defining 3 attributes: <br />cx which is x-axis coordinate <br />cy-the y-axis coordinate <br />r-is the radius of circle</p>
+                             
+                                  <p>Firstly,worked through creating SVG element and how to get the data set and how to bind that to SVG element.Then,Used a JavaScript function to assign colors to circles of different radius</p>
+                                  <p>Lastly,used .style() operator inside the function which determines the color to fill each circle from the data passed for each element. </p>
+                                  <p>While doing this example,I learnt how to position a SVG circle and how to cx,cy, and r values.</p>
+                              <li><b>Using the SVG Coordinate Space</b></li>
+                              <p>In the second example,I experimented to position circles relatively .</p>
+                              <li><p>How it works?</p></li>
+                              <p>Changing the positions of circle with same values for cx and cy gave me an idea of how coordinate space for SVG works.</p>
+                              
+                                  <p>This example is slightly different from previuos as JavaScript function here,is used to obtain cx and cy values. </p>
+                                  <p>It was challenging to change to change both cx and cy value and position the circles relatively.So,I added a constant value 55 to cy.This procedure helped me undersatnd thoroughly about coordiante system  for SVg </p>
+                              
+                              <li><b>SVG coordinate system</b></li>
+                              <p>In a normal cartesian coordinate system the point x=0, y=0 is at the lower left corner of the graph. As x increases the points move to the right in the coordinate system.
+                               As x decreases the points move to the left in the coordinate system. As y increases the points move up in the coordinate system. As y decreases the points move down in the coordinate system.</p>
+                              <p>In the SVG coordinate system the point x=0, y=0 is the upper left corner. The y-axis is thus reversed compared to a normal graph coordinate system. 
+                              As y increases in SVG, the points, shapes etc. move down, not up.</p> 
+                              <p>
+                                  <b>Illustration of both the Coordinate systems:</b>
+                              </p>
+                              <h4>Normal graph</h4>
+                              <svg width="320" height="120">
+                                  <!-- y-axis -->
+                                  <line x1="10" y1="10" x2="10" y2="110" style="stroke:#006600;" />
+                                  <!-- arrow -->
+                                  <line x1="5" y1="15" x2="10" y2="10" style="stroke:#006600;" />
+                                  <line x1="15" y1="15" x2="10" y2="10" style="stroke:#006600;" />
+
+
+                                  <!-- x-axis -->
+                                  <line x1="10" y1="110" x2="110" y2="110" style="stroke:#006600;" />
+                                  <!-- arrow -->
+                                  <line x1="105" y1="105" x2="110" y2="110" style="stroke:#006600;" />
+                                  <line x1="105" y1="115" x2="110" y2="110" style="stroke:#006600;" />
+                              </svg>
+                              <h4>SVG Coordinate System with 0,0 at the upper left corner</h4>
+                              <svg width="320" height="120">
+                                  <%-- y-axis --%>
+                                  <line x1="10" y1="10" x2="10" y2="110" style="stroke:#006600;" />
+                                  <%-- arrow --%>
+                                  <line x1="5" y1="105" x2="10" y2="110" style="stroke:#006600;" />
+                                  <line x1="15" y1="105" x2="10" y2="110" style="stroke:#006600;" />
+
+
+                                  <%-- x-axis --%>
+                                  <line x1="10" y1="10" x2="110" y2="10" style="stroke:#006600;" />
+                                  <%-- arrow --%>
+                                  <line x1="105" y1="5" x2="110" y2="10" style="stroke:#006600;" />
+                                  <line x1="105" y1="15" x2="110" y2="10" style="stroke:#006600;" />
+                              </svg>
+
+
+                                 
+                              <li><h5>References:</h5></li>
+                              <a href="https://uwdata.github.io/d3-tutorials/fundamental.html#/">Fundamentals of HTML,CSS,JS,D3</a><br />
+                              <a href="https://www.dashingd3js.com/table-of-contents">Tutorials of D3 for beginners</a><br />
+                              <a href="https://d3js.org/d3.v4.min.js">D3 version 4 javascript package</a><br />
+                              <a href="https://bost.ocks.org/mike/circles/">More examples for SVG element</a><br />
+                              <a href="https://website.education.wisc.edu/~swu28/d3t/concept.html">Beginner's guide to use D3by Andrew Shwartz</a><br />
+                              <a href="http://tutorials.jenkov.com/svg/svg-coordinate-system.html">Difference between coordinate space in SVG and Mathematics by Jacob Jenkov</a><br />
+                              <a href="http://www.d3noob.org/2013/07/arranging-more-than-one-d3js-graph-on.html">Arranging more than one D3 graph in a webpage</a>
+                          </ul>
+                      </td>
+                  </tr>
+
+                <table>
+                <script>
+                          function Styling() {
+                              circleRadii = [100, 50, 25]
+                              var svgContainer = d3.select("body").append("svg")
+                                                                   .attr("width", 800)
+                                                                   .attr("height", 500);
+
+                              var circles = svgContainer.selectAll("circle")
+                                                        .data(circleRadii)
+                                                        .enter()
+                                                        .append("circle")
+
+                              var circleAttributes = circles
+                                                     .attr("cx", 150)
+                                                     .attr("cy", 150)
+                                                     .attr("r", function (d) { return d; })
+                                                     .style("fill", function (d) {
+                                                         var returnColor;
+                                                         if (d === 100) {
+                                                             returnColor = "pink";
+                                                         } else if (d === 50) {
+                                                             returnColor = "blue";
+                                                         } else if (d === 25) { returnColor = "yellow"; }
+                                                         return returnColor;
+                                                     });
+                          }
+                          function Coordinate_space()
+                          {
+
+                              var spaceCircles = [150, 200, 250];
+                              
+                              var svgContainer = d3.select("body").append("svg")
+                                                                   .attr("width", 400)
+                                                                   .attr("height", 400);
+
+                              var circles = svgContainer.selectAll("circle")
+                                                         .data(spaceCircles)
+                                                         .enter()
+                                                         .append("circle");
+
+                              var circleAttributes = circles
+                                                     .attr("cx", function (d) { return d; })
+                                                     .attr("cy", function (d) { return d+55; })
+                                                     .attr("r", 25)
+                                                     .style("fill", function (d) {
+                                                         var returnColor;
+                                                         if (d === 150) {
+                                                             returnColor ="black";
+                                                         } else if (d === 200) {
+                                                             returnColor = "yellow";
+                                                         } else if (d === 250) { returnColor = "teal"; }
+                                                         return returnColor;
+                                                     });
+
+                          }
+                </script>
+</body>
+</html>
